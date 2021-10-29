@@ -1,0 +1,28 @@
+
+<body style="background-color:${properties.color @context='styleString'}">
+
+<sly data-sly-use.logic="logic.js">
+<p>${properties.jcr:description @ context='html'}</p>
+<div id="one" style="background-color: #dfdf1f">
+    <select data-sly-list="${logic.navRoot.listChildren}" name ="colors" onchange="changeColor1(this)">
+        <option value="${item.properties.value}">${item.properties.text}</option>
+    </select>
+</div>
+    <div id ="two" style="background-color: #2020e0">
+        <select data-sly-list="${logic.navRoot.listChildren}" name ="colors" onchange="changeColor2(this)">
+            <option value="${item.properties.value}">${item.properties.text}</option>
+        </select>
+    </div>
+    <p>Name of the current node (parent node) is: ${currentNode.Name}</p><br>
+    <p>Property of this node is: ${properties.color} which is sky-blue</p><br>
+    <p style="font-style:italic; font-size: 25px; font-weight: 50; color: red;">And we have to set the background of this page as the color of the current node, hence sky blue background</p>
+</sly>
+<script>
+    function changeColor1(opt) {
+        document.getElementById("one").style.backgroundColor = opt.value;
+    }
+    function changeColor2(opt) {
+        document.getElementById("two").style.backgroundColor = opt.value;
+    }
+</script>
+</body>
