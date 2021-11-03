@@ -13,9 +13,10 @@
             <option value="${item.properties.value}">${item.properties.text}</option>
         </select>
     </div>
-    <p>Name of the current node (parent node) is: ${currentNode.Name}</p><br>
-    <p>Property of this node is: ${properties.color} which is sky-blue</p><br>
-    <p style="font-style:italic; font-size: 25px; font-weight: 50; color: red;">And we have to set the background of this page as the color of the current node, hence sky blue background</p>
+    <p style="font-weight: 50; ">Page bg-color is taken from color property of this current node </p>
+
+    <p>use ${currentNode.Name}'s dialog to set page background color.</p>
+    <p>current background color is: ${properties.color}</p><br>
 </sly>
 <script>
     function changeColor1(opt) {

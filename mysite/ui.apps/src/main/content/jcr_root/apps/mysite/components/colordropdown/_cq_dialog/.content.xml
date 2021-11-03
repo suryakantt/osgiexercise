@@ -17,7 +17,8 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                             fieldLabel="color"
-                            name="./color"/>
+                            name="./color"
+                            value="#D9E3DA"/>
                 </items>
             </column>
         </items>
