@@ -5,7 +5,7 @@ $(window).adaptTo("foundation-registry").register("foundation.validation.validat
 
         var input = el.value;
 
-        if(value.indexOf(shouldContain) === -1){
+        if(value.indexOf(shouldContain)<6 &&value.indexOf(shouldContain)!==0){
 			return "The field should contain " + shouldContain + ". Current value is " + el.value;
         }
 
